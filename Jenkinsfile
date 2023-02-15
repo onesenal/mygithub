@@ -25,7 +25,7 @@
     stage('SonarQube analysis') {
         def scannerHome = tool 'sonarqube';
         withSonarQubeEnv('sonarserver'){
-            sh "${scannerHome}/bin/sonar-scanner 	      -Dsonar.projectKey=mygithub 	      -Dsonar.host.url=http://192.168.160.229:9000 	      -Dsonar.login=de56be876f9095ed8a2c91f701d62698f8c626a4 	      -Dsonar.sources=. 	      -Dsonar.report.export.path=sonar-report.json 	      -Dsonar.exclusions=report/* 	      -Dsonar.dependencyCheck.jsonReportPath=./report/dependency-check-report.json 	      -Dsonar.dependencyCheck.xmlReportPath=./report/dependency-check-report.xml 	      -Dsonar.dependencyCheck.htmlReportPath=./report/dependency-check-report.html"
+            sh "${scannerHome}/bin/sonar-scanner 	      -Dsonar.projectKey=mygithub 	      -Dsonar.host.url=http://192.168.160.229:9000 	      -Dsonar.login=1b745efcc5e33501c972e9c9fabc4b6f76d26f15 	      -Dsonar.sources=. 	      -Dsonar.report.export.path=sonar-report.json 	      -Dsonar.exclusions=report/* 	      -Dsonar.dependencyCheck.jsonReportPath=./report/dependency-check-report.json 	      -Dsonar.dependencyCheck.xmlReportPath=./report/dependency-check-report.xml 	      -Dsonar.dependencyCheck.htmlReportPath=./report/dependency-check-report.html"
         }
     }
     stage('Build') {
